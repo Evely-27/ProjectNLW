@@ -1,0 +1,14 @@
+/*Explicação de elementos css
+
+background-image: serve paar adicionar uma imagem para o fundo da página
+url() : função para dizer o endereço de onde algo se encontra, o local é um argumento
+
+*/
+
+body {
+    background-image: url(./assets/Fundo.jpg);
+    background-position:  top center;           /* imagem centralizada começando no inicio */
+    background-size: 100% auto; /* o 100% é para pegar da largura, e o auto mara se ajustar conforme a altura da tela.*/
+    background-repeat: no-repeat; /* serve para  aimagem não ficar se repetindo*/
+    background-color: #121214;  /* serve para cobrir o resto da tela , a cor escolhida comninando com o fim da imagem */
+} 
