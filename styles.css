@@ -1,9 +1,20 @@
+/* reset do css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* cada caixa é contada com o total dos elementos, porém com o boerder-box deixa somento o tamanho definido da caixa */
+}
+
+ul {
+    list-style: none; /* tirar o estilo da lista */ 
+}
 /*Explicação de elementos css
 
 background-image: serve paar adicionar uma imagem para o fundo da página
 url() : função para dizer o endereço de onde algo se encontra, o local é um argumento
 
 */
+
 
 body {
     background-image: url(./assets/Fundo.jpg);
@@ -19,7 +30,7 @@ a seção tem uma estilização com uam cor diferente para abranger a div
 a div contém um fondo direrente e tem textos e imagens
 
 */
-/* */
+/*  */
 
 main * {
     border: 1px solid greenyellow;
