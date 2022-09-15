@@ -8,7 +8,27 @@ url() : função para dizer o endereço de onde algo se encontra, o local é um 
 body {
     background-image: url(./assets/Fundo.jpg);
     background-position:  top center;           /* imagem centralizada começando no inicio */
-    background-size: 100% auto; /* o 100% é para pegar da largura, e o auto mara se ajustar conforme a altura da tela.*/
+    background-size: 100% auto; /* o 100% é para pegar da largura total da imagem, e o auto mara se ajustar conforme a altura da tela.*/
     background-repeat: no-repeat; /* serve para  aimagem não ficar se repetindo*/
     background-color: #121214;  /* serve para cobrir o resto da tela , a cor escolhida comninando com o fim da imagem */
 } 
+
+/* Estilização dos cards
+a main  contém tudo abaixo, então ao definir suas caracteristicas passamos para seus filhos,
+a seção tem uma estilização com uam cor diferente para abranger a div 
+a div contém um fondo direrente e tem textos e imagens
+
+*/
+/* */
+
+main * {
+    border: 1px solid greenyellow;
+}
+
+main {
+    max-width: 580px; /* serve para limitar a largura maxima que pode ter */
+    width: 90%; /* diz que a largura deverá pegar se for > 580 , 90% da tela, % é sempre relativo a algo  */
+    margin: auto; /* Como ela esta pegando 90% da tela, sua margem será distanciada com o restando dos 10%, deixando-a no meio */
+}
+
+
