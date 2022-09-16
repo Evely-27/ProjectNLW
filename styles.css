@@ -24,6 +24,11 @@ body {
     background-color: #121214;  /* serve para cobrir o resto da tela , a cor escolhida comninando com o fim da imagem */
 } 
 
+body * {
+    font-family:'Inter', sans-serif;
+    line-height: 160%; /* altura da linha */
+}
+
 /* Estilização dos cards
 a main  contém tudo abaixo, então ao definir suas caracteristicas passamos para seus filhos,
 a seção tem uma estilização com uam cor diferente para abranger a div 
@@ -32,14 +37,59 @@ a div contém um fondo direrente e tem textos e imagens
 */
 /*  */
 
-main * {
+/* main * {
     border: 1px solid greenyellow;
-}
+} */
 
+/* Para distancaior os elementos , temos varias opções
+Vou colocar 2 exemplos de como distanciar as sections
+ */
 main {
     max-width: 580px; /* serve para limitar a largura maxima que pode ter */
     width: 90%; /* diz que a largura deverá pegar se for > 580 , 90% da tela, % é sempre relativo a algo  */
     margin: auto; /* Como ela esta pegando 90% da tela, sua margem será distanciada com o restando dos 10%, deixando-a no meio */
+    
+    display: grid; 
+    /* Distancia entre os elementos da  main , 2 forma*/
+    /* uma forma de distanciar os elementos */
+    /* display: flex;
+    flex-direction: column; */
+    gap: 24px;
+
 }
 
+section {
+    color: white;
+}
 
+section h2 {
+    letter-spacing: -0.47px;  /* espaço entre as letras */
+}
+
+section p {
+    /* letter-spacing: -0.18px; */
+    color: #A1A1AA;
+
+}
+
+/* Display = visaualização dos elementos, como vemos as caixas no HTML
+2 tipos
+1: caixa ao lado = uma embaixo da outra
+2: caixa dentro de outra caixa
+A ul engloba as caixas(li) 
+ */
+ul {
+    display: flex; /* deixa os elementos dentro em bloco */
+    gap: 16px;  /* distanciar os elementos, somente com flex */
+    margin-top: 24px; /* distanciar as ul do top  */
+
+}
+.games-list img {
+    width: 90px;
+    border-radius: 8px;  /* arredondamento da borda */
+}
+.channel-list img {
+    border-radius: 50%;
+    width: 70px;
+    
+}
