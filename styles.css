@@ -31,6 +31,7 @@ body * {
 
 header {
     margin-top: 32px;
+    height: calc(120px + 32px);
     /* como pegamos a img com referencia a div não conseguimos alinhar com o text-align */
     /* text-align: center; alinha elementos que tempropriedade de texto */
 }
@@ -42,6 +43,15 @@ header {
     display: flex;
     padding: 4px;
 
+    /* ao receber a proproiedade de transition, faça.. */
+    transition: transform .3s;
+
+ }
+ /* Efeito de transição na foto 
+ hover: ao passar o mouse ...
+ */
+ header div:hover {
+    transform: scale(1.1);
  }
 header img {
     /* width: 120px; */
@@ -115,13 +125,21 @@ section p {
 2: caixa dentro de outra caixa
 A ul engloba as caixas(li) 
  */
-ul {
+section ul {
     display: flex; /* deixa os elementos dentro em bloco */
     flex-wrap: wrap;  /* serve para ajustar conforme o tamanho disponivel do elemento */
     gap: 16px;  /* distanciar os elementos, somente com flex */
     margin-top: 24px; /* distanciar as ul do top  */
-
 }
+
+section ul li {
+    transition: transform .3s;
+    
+}
+section ul li:hover {
+    transform: scale(1.1);
+}
+
 .games-list img {
     width: 90px;
     border-radius: 8px;  /* arredondamento da borda */
@@ -129,6 +147,54 @@ ul {
 .channel-list img {
     border-radius: 50%;
     width: 70px;
-    border: 1px solid #443e54;
-    
+    border: 1px solid #443e54;   
+}
+
+/*  Animação 
+o @keyfeames serva para dar inicio as animações
+translateY : Y corta a página de cima para baixo
+opacity = mostrar ou não
+backwards = puxar as propriedades
+*/
+
+header div {
+    animation: fromTop .7s .4s backwards;
+}
+
+@keyframes fromTop {
+    /* De onde o elemento estiver, subir para 30 */
+    from {
+        opacity: 0; 
+        transform: translateY(-30px);
+    }
+/* Serve para termina onde começou = 0 */
+    to {
+        opacity: 1;
+        translate: translateY(0);
+    }
+}
+main section {
+    animation: fromBottom .7s backwards;
+}
+/* main vai na section, pega o filho de numero... */
+main section:nth-child(1) {
+    animation-delay: 0 ;
+}
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0; 
+        transform: translateY(30px);
+    }
+/* Serve para termina onde começou = 0 */
+    to {
+        opacity: 1;
+        translate: translateY(0);
+    }
 }
