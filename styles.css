@@ -29,6 +29,28 @@ body * {
     line-height: 160%; /* altura da linha */
 }
 
+header {
+    margin-top: 32px;
+    /* como pegamos a img com referencia a div não conseguimos alinhar com o text-align */
+    /* text-align: center; alinha elementos que tempropriedade de texto */
+}
+ header div {
+    width: 130px;
+    margin: auto;
+    background-image: linear-gradient(90deg,#9572FC 0%, #43E7AD  50.52% , #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+
+ }
+header img {
+    /* width: 120px; */
+    width: 100%;  /* sua referencia de tamamnho é a div do header */
+    border-radius: 50%;
+}
+
+
+
 /* Estilização dos cards
 a main  contém tudo abaixo, então ao definir suas caracteristicas passamos para seus filhos,
 a seção tem uma estilização com uam cor diferente para abranger a div 
@@ -47,8 +69,9 @@ Vou colocar 2 exemplos de como distanciar as sections
 main {
     max-width: 580px; /* serve para limitar a largura maxima que pode ter */
     width: 90%; /* diz que a largura deverá pegar se for > 580 , 90% da tela, % é sempre relativo a algo  */
-    margin: auto; /* Como ela esta pegando 90% da tela, sua margem será distanciada com o restando dos 10%, deixando-a no meio */
-    
+    /* margin: auto; Como ela esta pegando 90% da tela, sua margem será distanciada com o restando dos 10%, deixando-a no meio */
+    margin: 32px auto; 
+    /* ao colocar 2 valores, fica o primeiro top e bottom e o 2 as laterais */
     display: grid; 
     /* Distancia entre os elementos da  main , 2 forma*/
     /* uma forma de distanciar os elementos */
@@ -56,6 +79,7 @@ main {
     flex-direction: column; */
     gap: 24px;
     margin-top: 32px;  /* para se distanciar de cima */
+    margin-bottom: 32px; /* para se distanciar de baixo */
 
 }
 
@@ -105,5 +129,6 @@ ul {
 .channel-list img {
     border-radius: 50%;
     width: 70px;
+    border: 1px solid #443e54;
     
 }
